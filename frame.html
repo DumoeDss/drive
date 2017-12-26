@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://192.168.1.88:8088/JB_Industry/index_jk.jsp -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>冀北工业区</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit|ie-stand|ie-comp">
+<link rel="shortcut icon" href="http://192.168.1.88:8088/JB_Industry/image/rstico.png">
+<script>
+     function DockControl(ev){
+    		 var oEvent = ev || event;
+             var oDiv = document.getElementsByClassName('viewFramework-footer')[0];
+             var aImg = document.getElementsByName('img');
+             for(var i = 0;i < aImg.length;i++){
+                 //计算中心位置 x，y
+                 var x = aImg[i].offsetLeft + aImg[i].offsetWidth / 2;
+                 var y = aImg[i].offsetTop + oDiv.offsetTop + aImg[i].offsetHeight / 2;
+                 //计算三角的两边
+                 var a = x - oEvent.clientX;
+                 var b = y - oEvent.clientY;
+                 //计算距离
+                 var dis = Math.sqrt(a * a + b * b);
+                 //计算比例,300这个值可以自己根据效果修改
+                 var scale = 1- dis / 300;
+                 //判断scale，防止鼠标距离太远图片太小
+                 if(scale < 0.5) scale = 0.5;
+                 //改变img宽度
+                 aImg[i].style.width = (scale * 128) + 'px';
+                }
+            };
+</script>
+ <script src="frame_files/UnityProgress.js"></script>  
+    <script src="frame_files/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Built.json", {onProgress: UnityProgress});
+    </script>
+
+
+<!-- Bootstrap3 -->
+<link href="frame_files/bootstrap.css" rel="stylesheet">
+<!--自定义 -->
+<link href="frame_files/console.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="/JB_Industry/common/assets/js/html5shiv.min.js"></script>
+<script src="/JB_Industry/common/assets/js/respond.min.js"></script>
+<![endif]-->
+
+
+</head><body>
+<!-- loading -->
+<div id="loading" style="display:none;">
+    <p><img src="frame_files/ripple-loading.gif" alt=""><br>玩命加载中，请稍等……</p>
+</div>
+<header>
+    <div class="viewFramework-topbar">
+        <!--topbar -->
+        <div class="kingtroldata-console-topbar">
+            <div class="topbar-wrap topbar-clearfix">
+                <div class="topbar-head topbar-left">
+                    <a style="cursor:default " class="topbar-home-link topbar-left">
+                        <span>
+                        	<img style="margin:15px" src="frame_files/title.png">
+                        </span>
+                    </a>
+                </div>
+                <div class="topbar-info topbar-right topbar-clearfix">
+                    <!-- 用户信息 -->
+                    <div class="topbar-left topbar-user">
+                        <div class="dropdown topbar-info-item">
+                            <a class="dropdown-toggle topbar-btn" href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#" id="user-dropdown-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span id="user_name">管理员</span>
+                                <span class="icon-arrow-down"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="user-dropdown-menu">
+                                <li class="topbar-info-btn"><a id="userInfo" href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><span>修改用户信息</span></a></li>
+                                <li class="topbar-info-btn"><a id="changePwd" href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><span>修改密码</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 用户信息end-->
+                    <!-- 退出 -->
+                    <div class="topbar-left topbar-btn">
+                        <div class="topbar-info-item">
+                            <a class="topbar-btn" onclick="loginOut();">
+                                <span class="glyphicon glyphicon-off"></span>
+                                <span>退出</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 退出end-->
+                </div>
+            </div>
+        </div>
+        <!--topbar end -->
+    </div>
+</header>
+
+<!--mainbody -->
+	<div class="viewFramework-body viewFramework-sidebar-full">
+		<!-- 最左侧可直接 文字变icon 菜单 -->
+		<div class="viewFramework-sidebar">
+			<div class="sidebar-content">
+				<div class="sidebar-inner">
+<!-- 					<div class="sidebar-fold icon-unfold" id="switch-menu-mode"></div> -->
+					<div class="sidebar-nav main-nav sidebar-nav-fold">
+				  <div class="sidebar-title">
+                  <div class="sidebar-title-inner">   
+				  <span class="sidebar-title-icon icon-arrow-right"></span> 
+				  <span class="sidebar-title-text">水信息分类统计</span>  
+				  </div>
+				  </div>			  
+                  <ul class="sidebar-trans">                                      						  
+				 <li class="nav-item" objid1="1" fid="">
+				 <a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/water_curve.jsp?factoryType=0&amp;factoryId=1151041368&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94">
+				 <div class="nav-icon sidebar-trans">
+				 <span class="glyphicon glyphicon-off"></span>
+				 </div>
+				 <span class="nav-title">监测指标数据对比</span>
+				 </a>
+				 </li>
+				 <li class="nav-item" objid1="2" fid="">
+				 <a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/report/jsp/water_report.jsp?menuName=%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%8E%86%E5%8F%B2%E6%8A%A5%E8%A1%A8">
+				 <div class="nav-icon sidebar-trans">
+				 <span class="glyphicon glyphicon-off"></span>
+				 </div>
+				 <span class="nav-title">监测数据历史报表</span>
+				 </a>
+				 </li>
+				 <li class="nav-item" objid1="3" fid="">
+				 <a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/water_curve_his.jsp?factoryType=0&amp;factoryId=1151041368&amp;menuPath=^1151041368^11346&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">
+				 <div class="nav-icon sidebar-trans">
+				 <span class="glyphicon glyphicon-off"></span>
+				 </div>
+				 <span class="nav-title">监测指标多厂对比</span>
+				 </a>
+				 </li>
+				</ul>
+				</div>
+
+				<div class="sidebar-nav main-nav sidebar-nav-fold">
+				<div class="sidebar-title">
+				<div class="sidebar-title-inner">
+				<span class="sidebar-title-icon icon-arrow-down"></span>
+				<span class="sidebar-title-text">废气信息分类统计</span>
+				</div>
+				</div>
+				<ul class="sidebar-trans">                   
+				<li class="nav-item" objid1="4" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/gas_curve.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测指标数据对比</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="5" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/report/jsp/gas_report.jsp?menuName=%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%8E%86%E5%8F%B2%E6%8A%A5%E8%A1%A8">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测数据历史报表</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="6" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/gas_curve_his.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测指标多厂对比</span>   
+				</a>                     
+				</li> 				
+				</ul>                              
+                </div>
+				
+				<div class="sidebar-nav main-nav sidebar-nav-fold">
+				<div class="sidebar-title">
+				<div class="sidebar-title-inner">
+				<span class="sidebar-title-icon icon-arrow-down"></span>
+				<span class="sidebar-title-text">固废入侵信息统计</span>
+				</div>
+				</div>
+				<ul class="sidebar-trans">                   
+				<li class="nav-item" objid1="7" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/solid_curve.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测指标数据对比</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="8" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/report/jsp/solid_report.jsp?menuName=%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%8E%86%E5%8F%B2%E6%8A%A5%E8%A1%A8">    
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测数据历史报表</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="9" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/cure/solid_curve_his.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测指标多厂对比</span>   
+				</a>                     
+				</li> 				
+				</ul>                              
+                </div>
+				
+				
+				<div class="sidebar-nav main-nav sidebar-nav-fold">
+				<div class="sidebar-title">
+				<div class="sidebar-title-inner">
+				<span class="sidebar-title-icon icon-arrow-down"></span>
+				<span class="sidebar-title-text">设备信息分类统计</span>
+				</div>
+				</div>
+				<ul class="sidebar-trans">                   
+				<li class="nav-item" objid1="11" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备在线状况</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="12" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%8E%86%E5%8F%B2%E6%8A%A5%E8%A1%A8">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备维修保养</span>   
+				</a>                     
+				</li> 
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备入库管理</span>   
+				</a>                     
+				</li> 				
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备维修管理</span>   
+				</a>                     
+				</li>
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备台账管理</span>   
+				</a>                     
+				</li>
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备报废管理</span>   
+				</a>                     
+				</li>
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备更新管理</span>   
+				</a>                     
+				</li>
+				<li class="nav-item" objid1="13" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/physical_examination/jsp/physical_examination.jsp?factoryId=1151041372&amp;menuPath=^1151041372^11780&amp;menuName=%E7%9B%91%E6%B5%8B%E6%8C%87%E6%A0%87%E5%A4%9A%E5%8E%82%E5%AF%B9%E6%AF%94">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">监测设备报警管理</span>   
+				</a>                     
+				</li>
+				</ul>                              
+                </div>
+				
+				<div class="sidebar-nav main-nav sidebar-nav-fold">
+				<div class="sidebar-title">
+				<div class="sidebar-title-inner">
+				<span class="sidebar-title-icon icon-arrow-down"></span>
+				<span class="sidebar-title-text">监控视频信息</span>
+				</div>
+				</div>
+				<ul class="sidebar-trans">                   
+				<li class="nav-item" objid1="14" fid="">   
+				<a class="sidebar-trans" href="http://192.168.1.88:8088/JB_Industry/pages/video/video.jsp?factoryId=1151041125;menuName=%E8%A7%86%E9%A2%91%E7%9B%91%E6%8E%A7">  
+				<div class="nav-icon sidebar-trans">         
+				<span class="glyphicon glyphicon-off"></span>               
+				</div>                          
+				<span class="nav-title">视频监控</span>   
+				</a>                     
+				</li> 
+				</ul>                              
+                </div>
+
+				</div>
+			</div>
+		</div>
+		<!--多级菜单，三级通过下拉来实现 -->
+		<div class="viewFramework-product">
+
+ <div class="viewFramework-product-body">
+	<div class="console-container">
+		<div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px; padding: 0px; margin: 0px; border: 0px none; position: relative; background: rgb(35, 31, 32) none repeat scroll 0% 0%;"><canvas style="cursor: none;" id="#canvas" width="960" height="600"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+      <div class="footer">
+        
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+       
+      </div>
+    </div>
+	</div>
+</div>
+
+	</div>
+</div>
+<style>
+     .viewFramework-footer {overflow:hidden;}
+    .viewFramework-footer img{width:64px;vertical-align: bottom;};
+</style>
+
+<!-- 修改密码-->
+			<div class="modal  fade" id="pwdPopUp" data-backdrop="static" data-keyboard="false">
+				<div class="modal-dialog" id="pwdPopUpDialog" data-backdrop="static" data-keyboard="false">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">修改密码</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form" id="changePwdForm">
+								<div class="form-group">
+									<label class="col-sm-3 control-label must-info" for="userOldPwd">原密码</label>
+									<div class="col-sm-7">
+										<input class="form-control" style="width: 100%" id="userOldPwd" placeholder="请输入原密码" name="userOldPwd" type="password">
+										<div>
+											<label for="userOldPwd" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-3 control-label must-info" for="userNewPwd">新密码</label>
+									<div class="col-sm-7">
+										<input class="form-control" style="width: 100%" id="userNewPwd" placeholder="请输入新密码" name="userNewPwd" type="password">
+										<div>
+											<label for="userNewPwd" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="submit" class="btn btn-primary" id="changePwdBtn">保存</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 页面弹出框 修改用户信息-->
+			<div class="modal  fade" id="userUpdatePopUp" data-backdrop="static" data-keyboard="false">
+				<div class="modal-dialog" id="userPopUpDialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							<h4 class="modal-title" id="myModalLabel">用户信息</h4>
+						</div>
+						<div class="modal-body">
+							<form class="form-horizontal" role="form" id="updateInfoForm">
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="userRealName_h">用户名</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userRealName_h" placeholder="请输入真实姓名" name="userRealName_h" type="text">
+										<div>
+											<label for="userRealName_h" class="error"></label>
+										</div>
+									</div>
+									<label class="col-sm-2 control-label must-info" for="userLoginName_h">登录名</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userLoginName_h" placeholder="请输入系统登录名" name="userLoginName_h" type="text">
+										<div>
+											<label for="userLoginName_h" class="error"></label>
+										</div>
+									</div>
+
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="userEmail_h">邮箱</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userEmail_h" placeholder="请输入用户邮箱" name="userEmail_h" type="text">
+										<div>
+											<label for="userEmail_h" class="error"></label>
+										</div>
+									</div>
+									<label class="col-sm-2 control-label must-info" for="userEntryTime_h">入职时间</label>
+									<div class="input-append date col-sm-4">
+										<input class="form-control datetimepicker" style="width: 100%" id="userEntryTime_h" name="userEntryTime_h" placeholder="请选择日期" date="true" type="text">
+										<div>
+											<label for="userEntryTime_h" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="userSex_h">性别</label>
+									<div class="col-sm-4">
+										<select id="userSex_h" class="form-control select2-hidden-accessible" style="width: 100%" name="userSex_h" tabindex="-1" aria-hidden="true">
+											<option value="1" selected="selected">男</option>
+											<option value="2">女</option>
+										</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-userSex_h-container"><span class="select2-selection__rendered" id="select2-userSex_h-container" title="男">男</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+									</div>
+									<label class="col-sm-2 control-label" for="userBirthday_h">出生日期</label>
+									<div class=" date col-sm-4">
+										<input class="form-control datetimepicker" style="width: 100%" id="userBirthday_h" name="userBirthday_h" placeholder="请选择出生日期" date="true" type="text">
+										<div>
+											<label for="userBirthday_h" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="deptName_h">所属机构</label>
+									<div class="col-sm-4">
+										<!-- <input class="form-control" id="orgName" type="text"
+									placeholder="请输入用户所属机构名称" /> -->
+										<select id="deptName_h" class="form-control select2-hidden-accessible" style="width: 100%" placeholder="请输入用户所属机构名称" tabindex="-1" aria-hidden="true"><option value="215" selected="selected">技术部</option><option value="131">管理部</option></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-deptName_h-container"><span class="select2-selection__rendered" id="select2-deptName_h-container" title="技术部">技术部</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+										<div>
+											<label for="deptName_h" class="error"></label>
+										</div>
+									</div>
+									<label class="col-sm-2 control-label" for="userBirthPlace_h">籍贯</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userBirthPlace_h" placeholder="**省/市/自治区" name="userBirthPlace_h" type="text">
+										<div>
+											<label for="userBirthPlace_h" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="userMobilePhone_h">手机号码</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userMobilePhone_h" placeholder="请输入11位手机号码" name="userMobilePhone_h" type="text">
+										<div>
+											<label for="userMobilePhone_h" class="error"></label>
+										</div>
+									</div>
+									<label class="col-sm-2 control-label" for="userSchool_h">毕业院校</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userSchool_h" name="userSchool_h" placeholder="***大学" type="text">
+										<div>
+											<label for="userSchool_h" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label must-info" for="userEducation_h">教育背景</label>
+									<div class="col-sm-4">
+										<select id="userEducation_h" class="form-control select2-hidden-accessible" style="width: 100%" name="userEducation_h" tabindex="-1" aria-hidden="true">
+											<option value="7" selected="selected">博士后</option>
+											<option value="6">博士</option>
+											<option value="5">硕士</option>
+											<option value="4">本科</option>
+											<option value="3">大专</option>
+											<option value="2">中专</option>
+											<option value="1">高中</option>
+											<option value="0">其它</option>
+										</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-userEducation_h-container"><span class="select2-selection__rendered" id="select2-userEducation_h-container" title="博士后">博士后</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+									</div>
+									<label class="col-sm-2 control-label" for="userProfessional_h">专业</label>
+									<div class="col-sm-4">
+										<input class="form-control" style="width: 100%" id="userProfessional_h" placeholder="请输入专业" name="userProfessional_h" type="text">
+										<div>
+											<label for="userProfessional_h" class="error"></label>
+										</div>
+									</div>
+								</div>
+								<input id="userId" style="display: none" type="text">
+								<div class="modal-footer">
+									<button type="submit" class="btn btn-primary" id="userInfoBtn">保存</button>
+									<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 根目录内容 -->
+<footer>
+	<div class="viewFramework-footer" onmousemove="DockControl()">
+				<a href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><img name="img" src="frame_files/dt.png" style="width: 64px;"></a>
+				<a href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><img name="img" src="frame_files/ss.png" style="width: 64px;"></a>
+				<a href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><img name="img" src="frame_files/tb.png" style="width: 64px;"></a>
+				<a href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><img name="img" src="frame_files/sp.png" style="width: 64px;"></a>
+				<a href="http://192.168.1.88:8088/JB_Industry/index_jk.jsp#"><img name="img" src="frame_files/sz.png" style="width: 64px;"></a>
+		</div>
+	</footer>
+<div class="kingtroldata-console-sidebar-tooltip right fade in hide" style="left: 50px;">
+				<div class="tooltip-arrow"></div>
+				<div class="tooltip-inner"></div>
+</div>
+<!--相关支持包  -->
+<script type="text/javascript" src="frame_files/jQuery-2.js"></script>
+<script src="frame_files/bootstrap.js"></script>
+<script src="frame_files/common.js"></script>
+<!-- 公共js -->
+<script type="text/javascript" src="frame_files/common1.js"></script>
+<script src="blob:null/6cac7da8-9439-4cc5-80ea-05d471cbe79b"></script><script src="blob:null/e7eea4e3-427e-4e36-af4e-12efb1f986eb"></script><script src="blob:null/7be6d357-651a-4bb7-b693-665e3b9150b6"></script><script src="blob:null/555acb3c-861d-47ed-bdf4-ee5b45aef74d"></script></body></html>
